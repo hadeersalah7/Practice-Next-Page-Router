@@ -10,7 +10,7 @@ const EventList = (props) => {
                 key={items.id}
                 id={items.id}
                 image={items.image}
-                date={items.image}
+                date={items.date}
                 location={items.location}
             />
         </ul>
