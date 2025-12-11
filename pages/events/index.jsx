@@ -1,13 +1,16 @@
-import EventList from "../../Components/EventList";
-import { getFeaturedEvents } from "../../dummy-data";
+import { Fragment } from "react/jsx-runtime";
+import EventList from "../../Components/events/EventList";
+import EventsSearch from "../../Components/events/EventsSearch";
+import { getAllEvents } from "../../dummy-data";
 
 export default function AllEventsPage() {
-    const events = getFeaturedEvents();
+    const events = getAllEvents();
     return (
-        <div>
+        <Fragment>
+            <EventsSearch />
             {events.map((event) => (
                 <EventList items={event} />
             ))}
-        </div>
+        </Fragment>
     );
 }
